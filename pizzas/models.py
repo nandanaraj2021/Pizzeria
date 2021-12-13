@@ -10,6 +10,9 @@ class Pizza(models.Model):
     def __str__(self):
         return self.name
 
-class Topings(models.Model):
+class Topping(models.Model):
     pizza = models.ForeignKey(Pizza, on_delete=models.CASCADE)
     name = models.TextField()
+
+    def __str__(self):
+        return self.name
