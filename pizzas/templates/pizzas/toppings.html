@@ -4,6 +4,24 @@
 
 <p>Pizza: {{ Pizza }}</p>
 
+<!-- {% if pizza_id == 1 %}
+    <p>
+        {% load static %} <img src="{% static 'pizzas/media/hawaiian_pizza.jpeg' %}" alt="home" />
+    </p>
+{% else %}
+    <p>
+        {% load static %} <img src="{% static 'pizzas/media/meat_lovers.jpeg' %}" alt="home" />
+    </p>
+{% endif %} -->
+
+<p>
+    {% load static %} <img src="{% static 'pizzas/media/hawaiian_pizza.jpeg' %}" alt="home" />
+</p>
+
+<p>
+    {% load static %} <img src="{% static 'pizzas/media/meat_lovers.jpeg' %}" alt="home" />
+</p>
+
 <ul>
     {% for e in toppings %}
 
