@@ -2,14 +2,16 @@
 
 {% block content %}
 
-<p>Toppings</p>
+<p>Pizza: {{ Pizza }}</p>
 
 <ul>
-    {% for t in toppings %}
+    {% for e in toppings %}
 
-    <li>{{ t }}</li>
+    <li>
+        <p>{{e.name}}</p>
+    </li>
     {% empty %}
-    <li>No toppings have been added yet.</li>
+    <li>There are no toppings for this pizza yet.</li>
     {% endfor %}
 </ul>
 

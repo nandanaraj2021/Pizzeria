@@ -3,11 +3,16 @@
 {% block content %}
 
 <p>Signature Pizzas</p>
+<p>
+    {% load static %} <img src="{% static 'pizzas/media/pizzeria.jpeg' %}" alt="home" />
+</p>
 
 <ul>
     {% for p in pizzas %}
 
-    <li>{{ p }}</li>
+    <li>
+        <a href="{% url 'pizzas:toppings' p.id %}">{{ p }}</a>
+    </li>
     {% empty %}
     <li>No Pizzas have been added yet.</li>
     {% endfor %}
